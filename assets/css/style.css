@@ -1,0 +1,91 @@
+body, html {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+.ppp-bg-grid {
+    background-image: repeating-linear-gradient(0deg, rgb(245, 245, 245) 0px, rgb(245, 245, 245) 1px,transparent 1px, transparent 21px),repeating-linear-gradient(90deg, rgb(245, 245, 245) 0px, rgb(245, 245, 245) 1px,transparent 1px, transparent 21px),linear-gradient(90deg, hsl(131,0%,98%),hsl(131,0%,98%));
+}
+
+.ppp-tsd-dark {
+    text-shadow: 1px 1px #000000;
+}
+
+.ppp-tsd-white {
+    text-shadow: 1px 1px #ffffff;
+}
+
+.ppp-pos-top {
+    position: absolute;
+    top: 0px;
+}
+
+.ppp-pos-bottom {
+    position: absolute;
+    bottom: 10px;
+}
+
+.ppp-img-dark {
+    filter: brightness(70%);
+}
+
+.ppp-img-blur {
+    filter: blur(.5px);
+}
+
+.img-hover-zoom {
+  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+
+/* [2] Transition property for smooth transformation of images */
+.img-hover-zoom img {
+  transition: transform .5s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.img-hover-zoom:hover img {
+  transform: scale(1.5);
+}
+
+.vertical-center {
+    min-height: 100%;  /* Fallback for vh unit */
+    min-height: 100vh; /* You might also want to use
+                          'height' property instead.
+                          
+                          Note that for percentage values of
+                          'height' or 'min-height' properties,
+                          the 'height' of the parent element
+                          should be specified explicitly.
+    
+                          In this case the parent of '.vertical-center'
+                          is the <body> element */
+  
+    /* Make it a flex container */
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex; 
+    
+    /* Align the bootstrap's container vertically */
+      -webkit-box-align : center;
+    -webkit-align-items : center;
+         -moz-box-align : center;
+         -ms-flex-align : center;
+            align-items : center;
+    
+    /* In legacy web browsers such as Firefox 9
+       we need to specify the width of the flex container */
+    width: 100%;
+    
+    /* Also 'margin: 0 auto' doesn't have any effect on flex items in such web browsers
+       hence the bootstrap's container won't be aligned to the center anymore.
+    
+       Therefore, we should use the following declarations to get it centered again */
+           -webkit-box-pack : center;
+              -moz-box-pack : center;
+              -ms-flex-pack : center;
+    -webkit-justify-content : center;
+            justify-content : center;
+  }
+  
